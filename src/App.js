@@ -1,5 +1,7 @@
+import Movie from "./hoc/Movie";
+
 function App() {
-  return <div>Hello World</div>;
+  return <Movie />;
 }
 
 export default App;
