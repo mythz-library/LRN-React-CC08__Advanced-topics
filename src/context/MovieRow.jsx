@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import UserContext from "./userContext";
+import CartContext from "./cartContext";
 
 function MovieRow(props) {
   const userContext = useContext(UserContext);
+  const cartContext = useContext(CartContext);
 
-  console.log("context", userContext);
+  console.log("Cart context", cartContext);
 
   return (
     <div>
