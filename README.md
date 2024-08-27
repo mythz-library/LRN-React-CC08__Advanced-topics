@@ -71,4 +71,25 @@ Under the advanced topics we'll discuss about the latest features of React
       }
      ```
 
-<!-- ### <ins>Context in Class Component</ins> -->
+<br/>
+
+### > <ins>Context in Functional Components</ins>
+
+- Using context in functional component lot more easier compared to using it in class components. Here an example,
+
+  ```js
+  import React, { useContext } from "react";
+  import UserContext from "./userContext";
+
+  function MovieRow(props) {
+    const currentUser = useContext(UserContext);
+
+    console.log("context", currentUser);
+
+    return <div>{currentUser.name}</div>;
+  }
+
+  export default MovieRow;
+  ```
+
+- Benefit: _To access the context, no longer need to use `UserContext.Consumer` component. Its means, no need to use a function to render the child components_
